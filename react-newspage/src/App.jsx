@@ -11,6 +11,7 @@ import './App.css'
       <div className="newsContainerBackground">
 
         <h2>Hello</h2>
+        <h1>HEllO</h1>
         <p>Hello again</p>
       </div>
     )
