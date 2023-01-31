@@ -13,13 +13,11 @@ var url = 'https://newsapi.org/v2/everything?' +
 
 var req = new Request(url);
 
-fetch(req)
-    .then(function(response) {
-        console.log(response.json());
-    })
+let allArticles = [];
 
-
-
+fetch(url)
+.then(res => res.json())
+.then(data => console.log(data))
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
