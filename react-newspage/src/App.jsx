@@ -8,8 +8,7 @@ import './App.css'
   export default function NewsStory(props) {
     
       const [newsData, setNewsData] = React.useState({})
-      const [count, setCount] = React.useState(0)
-
+      
       var url = 'https://newsapi.org/v2/everything?' +
           'q=Apple&' +
           'from=2023-01-29&' +
@@ -21,13 +20,19 @@ import './App.css'
           console.log("Effect ran")
           fetch(url)
               .then(res => res.json())
-              .then(data => setStarWarsData(data))
+              .then(data => setNewsData(data))
       }, [])
+
+
+      let articles = newsData.articles
+
+      console.log(articles)
+
 
     return (
       <div className="newsContainerBackground">
 
-        <h2>{newsData}</h2>
+        <h2></h2>
         <h1>HEllO</h1>
         <p>Hello again</p>
       </div>
