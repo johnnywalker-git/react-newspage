@@ -34,6 +34,7 @@ import './App.css'
 
         <h2></h2>
         <h1>HEllO</h1>
+        <button onClick={props.clickHandle()}>Test Button</button>
         <p>Hello again</p>
       </div>
     )

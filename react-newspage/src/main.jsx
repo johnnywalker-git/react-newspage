@@ -22,6 +22,6 @@ fetch(url)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-    <NewsStory />
+    <NewsStory clickHanddle/>
 
 )
