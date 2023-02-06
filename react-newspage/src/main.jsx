@@ -11,17 +11,28 @@ var url = 'https://newsapi.org/v2/everything?' +
           'sortBy=popularity&' +
           'apiKey=426a94f11afe46d0b56ad60680b44025';
 
-var req = new Request(url);
 
-let allArticles = [];
+
+function handleClick() {
+
+    console.log(firstArticle.title)
+}
+
+let firstArticle =
 
 fetch(url)
 .then(res => res.json())
-.then(data => console.log(data))
+.then(data => {
+    firstArticle = data.articles[0];
+  })
 
+  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-    <NewsStory clickHanddle/>
+    <NewsStory 
+    clickHandle = {handleClick} 
+    articleHeadline = {firstArticle.title}
+    />
 
 )
