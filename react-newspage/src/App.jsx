@@ -9,8 +9,6 @@ import './App.css'
 
     return (
       <div className="newsContainerBackground">
-
- 
         <button onClick={props.clickHandle}>Test Button</button>
         <h1>{`${props.articleHeadline} Hi`}</h1>
       </div>

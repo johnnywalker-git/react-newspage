@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import NewsStory from './App'
 import '../style.css'
@@ -13,23 +14,31 @@ var url = 'https://newsapi.org/v2/everything?' +
 
 
 
-function handleClick() {
 
-    console.log(firstArticle.title)
-}
 
-let firstArticle =
 
+
+const [allArticles, updateAllArticles] = React.useState()
+
+function getArticles() {
 fetch(url)
 .then(res => res.json())
 .then(data => {
-    firstArticle = data.articles[0];
+    updateAllArticles(data);
   })
 
+  c
+}
+
+function handleClick() {
+
+    console.log(allArticles)
+}
+
+console.log(allArticles)
   
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-
     <NewsStory 
     clickHandle = {handleClick} 
     articleHeadline = {firstArticle.title}
